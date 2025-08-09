@@ -4,89 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Windows 11 AtlasOS Kurulum Rehberi</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.unsplash.com/photo-1620641788421-75978e37b7b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 15, 30, 0.85);
+      z-index: -1;
+    }
+
+    header {
+      backdrop-filter: blur(10px);
+      background: rgba(10, 25, 47, 0.5);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(100, 150, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0.8rem auto 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .step {
+      backdrop-filter: blur(12px);
+      background: rgba(20, 35, 60, 0.4);
+      border: 1px solid rgba(100, 150, 255, 0.15);
+      border-radius: 16px;
+      padding: 1.8rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 120, 215, 0.25);
+    }
+
+    .step h2 {
+      font-size: 1.6rem;
+      color: #60a5fa;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .step h2::before {
+      content: "⚡";
+      margin-right: 10px;
+    }
+
+    .warning {
+      background: rgba(180, 30, 30, 0.3);
+      border-left: 4px solid #ef4444;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      backdrop-filter: blur(8px);
+    }
+
+    .warning strong {
+      color: #f87171;
+    }
+
+    ul, ol {
+      margin: 0.8rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <h1>🛠️ Windows 11 AtlasOS Kurulum Rehberi</h1>
-      <p>AtlasOS ile daha hızlı, temiz ve özelleştirilmiş bir Windows deneyimi yaşayın.</p>
-    </div>
+    <h1>AtlasOS</h1>
+    <p>Windows 11'in performans odaklı, optimize edilmiş versiyonu</p>
   </header>
 
-  <main class="container">
-    <section id="what-is">
-      <h2>AtlasOS Nedir?</h2>
-      <p>
-        <strong>AtlasOS</strong>, Windows 11'i optimize eden, gereksiz bloatware'ları (gereksiz yazılımları) kaldıran, performansı artıran ve gizliliği artıran bir özelleştirilmiş Windows kurulumudur.
-        Açık kaynak topluluk tarafından geliştirilir ve kişisel kullanım için uygundur.
-      </p>
-    </section>
-
-    <section id="why-use">
-      <h2>Neden AtlasOS?</h2>
-      <ul>
-        <li>⚡ Daha hızlı başlangıç ve yanıt süresi</li>
-        <li>🚫 Microsoft bloatware'larından arındırılmış</li>
-        <li>🔒 Gizlilik odaklı ayarlar</li>
-        <li>🎨 Modern ve temiz arayüz</li>
-        <li>💾 Daha az disk kullanımı</li>
-      </ul>
-    </section>
-
-    <section id="download">
-      <h2>📦 İndirme ve Kurulum</h2>
-      <ol>
-        <li>
-          <strong>AtlasOS ISO Dosyasını İndirin:</strong><br>
-          <a href="https://github.com/Atlas-OS/Windows" target="_blank" class="btn">GitHub - AtlasOS/Windows</a>
-        </li>
-        <li>
-          <strong>USB Hazırlayın:</strong><br>
-          Rufus veya Ventoy kullanarak bir USB belleği önyükleme yapılabilir hâle getirin.
-        </li>
-        <li>
-          <strong>USB ile Başlatın:</strong><br>
-          Bilgisayarınızı USB'den başlatın (BIOS/UEFI ayarlarından).
-        </li>
-        <li>
-          <strong>Kurulumu Başlatın:</strong><br>
-          Windows kurulum sihirbazını takip edin. Bölümleme yaparken dikkatli olun.
-        </li>
-        <li>
-          <strong>Tamamlayın ve Güncelleyin:</strong><br>
-          Kurulum sonrası Windows Update ile sürücüleri ve güvenlik yamalarını yükleyin.
-        </li>
-      </ol>
-    </section>
-
-    <section id="warnings">
-      <h2>⚠️ Uyarılar</h2>
-      <p>
-        <strong>AtlasOS üçüncü parti bir dağıtım olup, Microsoft tarafından desteklenmez.</strong><br>
-        - Yedek almayı unutmayın.<br>
-        - Lisans gereksinimleri hâlâ geçerlidir (orijinal Windows lisansı önerilir).<br>
-        - Test ortamında denemeniz önerilir.
-      </p>
-    </section>
-
-    <section id="faq">
-      <h2>❓ Sık Sorulan Sorular</h2>
-      <p><strong>Q: AtlasOS güvenli mi?</strong><br>
-      A: Kaynağı güvenilir GitHub reposundan indirildiğinde genellikle güvenlidir, ancak her zaman dosya hash'lerini kontrol edin.</p>
-
-      <p><strong>Q: Güncellemeler ne olur?</strong><br>
-      A: Windows Update çoğu güncellemeyi getirir, ancak bazı özelleştirmeler geçici olarak bozulabilir.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 AtlasOS Kurulum Rehberi | <a href="https://github.com/Atlas-OS/Windows" target="_blank">Resmi GitHub</a></p>
+  <div class="container">
+    <div class="warning">
+      <strong>⚠️ Uyarı:</strong> AtlasOS, Microsoft tarafından onaylanmamıştır. Kullanımı kendi sorumluluğunuzdadır. Lisans ihlali riski taşır.
     </div>
-  </footer>
+
+    <div class="step">
+      <h2>Gereksinimler</h2>
+      <ul>
+        <li>8 GB veya üzeri boş USB bellek</li>
+        <li>Windows 11 orijinal ISO (Microsoft’tan indirilmeli)</li>
+        <li>Rufus veya Ventoy (USB hazırlama aracı)</li>
+        <li>UEFI destekleyen bir sistem</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>AtlasOS İndir</h2>
+      <p>Resmi siteden güvenli bir şekilde indir:</p>
+      <a href="https://atlasos.net" class="btn" target="_blank">🌐 AtlasOS.net'e Git</a>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #ccc;">
+        <small>Hash doğrulaması yapmayı unutmayın!</small>
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Bootable USB Oluştur</h2>
+      <ol>
+        <li><strong>Rufus</strong> indir: <a href="https://rufus.ie" style="color:#60a5fa;">rufus.ie</a></li>
+        <li>USB belleğinizi takın.</li>
+        <li>Rufus’u açın ve:
+          <ul>
+            <li><strong>Boot selection:</strong> İndirdiğiniz AtlasOS ISO’su</li>
+            <li><strong>Partition scheme:</strong> GPT</li>
+            <li><strong>Target system:</strong> UEFI</li>
+          </ul>
+        </li>
+        <li>“Start” butonuna tıklayın ve bekleyin.</li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <h2>Kurulumu Başlat</h2>
+      <ol>
+        <li>USB’yi bilgisayarınıza takın.</li>
+        <li>Bilgisayarı yeniden başlatın ve <strong>BIOS/UEFI</strong> menüsüne girin (F2, F12, DEL).</li>
+        <li>Öncelikli boot cihazını USB olarak ayarlayın.</li>
+        <li>Kurulum ekranı açılacak. Talimatları izleyin.</li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <h2>Kurulum Sonrası</h2>
+      <ul>
+        <li>Lisans anahtarınızı girin (varsa).</li>
+        <li>Sürücüleri kontrol edin (WiFi, ekran kartı vs.)</li>
+        <li>Telemetri ve OneDrive gibi kaldırılmış bileşenler geri getirilebilir.</li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <strong>💡 İpucu:</strong> AtlasOS, gizlilik ve hız için bazı Microsoft hizmetlerini devre dışı bırakır. Bu normaldir.
+    </div>
+
+    <footer>
+      <p>Bu rehber eğitim amaçlıdır. <br>Tüm haklar ilgili sahiplerine aittir.</p>
+      <p><a href="https://github.com/kullaniciadi/atlasos-guide" target="_blank">GitHub'da Geliştir</a></p>
+    </footer>
+  </div>
 
 </body>
 </html>
